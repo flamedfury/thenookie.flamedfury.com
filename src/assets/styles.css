@@ -1,3 +1,144 @@
+:root {
+  --text: #f5e6e6;
+  --background: #2B2B2B;
+  --primary: #8B0000;
+  --secondary: #537c33;
+  --accent: #50b74f;
+
+  --step--2: clamp(0.5627rem, 0.7403rem + -0.2292vi, 0.6944rem);
+  --step--1: clamp(0.7956rem, 0.8465rem + -0.0656vi, 0.8333rem);
+  --step-0: clamp(1rem, 0.9565rem + 0.2174vi, 1.125rem);
+  --step-1: clamp(1.2rem, 1.0641rem + 0.6796vi, 1.5908rem);
+  --step-2: clamp(1.44rem, 1.1585rem + 1.4075vi, 2.2493rem);
+  --step-3: clamp(1.728rem, 1.2228rem + 2.5262vi, 3.1805rem);
+  --step-4: clamp(2.0736rem, 1.2306rem + 4.2151vi, 4.4973rem);
+  --step-5: clamp(2.4883rem, 1.1419rem + 6.7319vi, 6.3592rem);
+
+  --font-display: 'Road Rage', display;
+  --font-base: system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+* {
+  text-wrap: pretty;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
 body {
-  font-family: system-ui, sans-serif;
+  background-color: var(--background);
+  background-image: url('/assets/background.png');
+  background-repeat: repeat;
+  background-size: auto;
+  color: var(--text);
+  font-family: var(--font-base);
+  font-size: var(--step-0);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--step-5);
+  color: var(--primary)
+}
+
+h2 {
+  font-size: var(--step-4);
+  color: var(--accent)
+}
+
+h3 {
+  font-size: var(--step-3);
+}
+
+a {
+  color: var(--primary);
+}
+
+a:hover,
+a:focus {
+  color: var(--accent)
+}
+
+::marker {
+  color: var(--primary)
+}
+
+.flow * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+h1 {
+  --flow-space: 2em;
+}
+
+h2 {
+  --flow-space: 1.5em;
+}
+
+.site-title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+}
+
+/* layout */
+header {
+  grid-area: header;
+  background-color: var(--background);
+  padding: 20px;
+}
+
+main {
+  grid-area: content;
+  background-color: var(--background);
+  padding: 20px;
+}
+
+nav {
+  grid-area: sidebar;
+  background-color: var(--background);
+}
+
+footer {
+  padding: 20px;
+  grid-area: footer;
+  background-color: var(--background);
+}
+
+.wrapper {
+  max-width: 968px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "header  header"
+    "sidebar content"
+    "footer  footer";
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    grid-template-columns: 4fr;
+    grid-template-areas:
+      "header"
+      "content"
+      "sidebar"
+      "footer";
+  }
 }
