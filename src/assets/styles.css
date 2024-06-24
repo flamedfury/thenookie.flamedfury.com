@@ -1,9 +1,13 @@
 :root {
-  --text: #f5e6e6;
   --background: #2B2B2B;
+  --text: #EDEDED;
   --primary: #8B0000;
-  --secondary: #537c33;
-  --accent: #50b74f;
+  --secondary: #CCCCCC;
+  --accent: #FF0000;
+
+  --muted: #3A3A3A;
+  --slate: #4B4B4B;
+  --charcoal: #353535;
 
   --step--2: clamp(0.5627rem, 0.7403rem + -0.2292vi, 0.6944rem);
   --step--1: clamp(0.7956rem, 0.8465rem + -0.0656vi, 0.8333rem);
@@ -26,9 +30,6 @@
 
 * {
   margin: 0;
-}
-
-* {
   text-wrap: pretty;
 }
 
@@ -48,6 +49,14 @@ body {
   line-height: 1.6;
 }
 
+header,
+nav,
+main,
+footer {
+  background-color: var(--background);
+  border: var(--slate) 4px solid;
+}
+
 h1, h2, h3 {
   line-height: 1.1;
   text-wrap: balance;
@@ -59,21 +68,26 @@ h1 {
 }
 
 h2 {
-  font-size: var(--step-4);
-  color: var(--accent)
+  font-size: var(--step-3);
+  color: var(--primary)
 }
 
 h3 {
-  font-size: var(--step-3);
+  font-size: var(--step-1);
 }
 
 a {
-  color: var(--primary);
+  color: var(--accent);
 }
 
 a:hover,
 a:focus {
-  color: var(--accent)
+  color: var(--secondary)
+}
+
+pre {
+  font: inherit;
+  text-wrap: auto;
 }
 
 ::marker {
@@ -95,34 +109,41 @@ h2 {
 .site-title {
   font-family: var(--font-display);
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* layout */
 header {
   grid-area: header;
-  background-color: var(--background);
   padding: 20px;
 }
 
 main {
   grid-area: content;
-  background-color: var(--background);
   padding: 20px;
+  max-width: 680px;
 }
 
 nav {
   grid-area: sidebar;
-  background-color: var(--background);
 }
 
 footer {
   padding: 20px;
   grid-area: footer;
-  background-color: var(--background);
 }
 
 .wrapper {
-  max-width: 968px;
+  max-width: calc(968px - 15px);
+  padding: 12px;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr 3fr;
@@ -141,4 +162,37 @@ footer {
       "sidebar"
       "footer";
   }
+}
+
+/* Navigation */
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin-bottom: 10px;
+}
+
+.nav-header {
+  color: var(--primary);
+  font-weight: bold;
+  font-size: var(--step-1);
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.submenu {
+  margin-left: 10px;
+}
+
+.nav-link {
+  color: var(--text);
+  text-decoration: none;
+  padding-left: 5px;
+}
+
+.nav-link:hover {
+  color: var(--accent);
 }

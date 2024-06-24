@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
+
+  <title>{{ title }}{% if page.url != '/' %} | {{ meta.siteName }}{% endif %}</title>
   <link rel="stylesheet" href="/assets/styles.css">
 
   <link rel="preconnect" href="https://fonts.bunny.net">
@@ -15,19 +16,19 @@
 
   <div class="wrapper">
     <header>
-      <h1 class="site-title | flow">{{ title }}</h1>
+      <h1 class="site-title | flow">{{ meta.siteName }}</h1>
     </header>
     <main>
       <article class="flow">
-        <h2>Welcome</h2>
-        <p>{{ content | safe }}</p>
+        <h2>{{ title }}</h2>
+          {{ content | safe }}
       </article>
     </main>
     <nav>
       {% include("nav.njk") %}
     </nav>
     <footer class="flow">
-      <p>&copy;fLaMEd</p>
+      <p>&copy; 2001 {{ meta.siteName }} • A project by <a href="{{ meta.authorUrl }}">{{ meta.authorName }}</a></p>
     </footer>
   </div>
 

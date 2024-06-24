@@ -1,6 +1,7 @@
 ---
-title: Biography
+title: Band Biography
 layout: "base.njk"
+permalink: /biography/index.html
 ---
 
 "Limp what? Bizkit who?", you say. Well, maybe you haven't heard the buzz yet, but don't worry... You will. And by the time it reaches your virgin ears, its guaranteed to have transmogrified into a deafening roar.

@@ -1,12 +1,33 @@
 ---
-title: The Nookie
+title: Welcome To The Nookie
 layout: "base.njk"
 ---
 
-The year is 2000 
+Welcome to your **ultimate destination** where the year is 2001, and Limp Bizkit reigns supreme as one of the hottest bands in the world.
 
-If you think that Limp Bizkit fans are a bunch of violent, misogynist bullies, you aren't alone. "For years I looked into the crowd and saw a bunch of bullies and assholes who tortured me and ruined my life," [Fred Durst told Rolling Stone](https://www.rollingstone.com/music/music-news/fred-durst-limp-bizkit-was-used-as-fuel-to-torture-other-people-108646/) in 2009. "They were using my music as fuel to torture other people, even dressing like me. The music was being misinterpreted, and the irony affected me and we stepped away . . . I don't even listen to any type of music that's like Limp Bizkit at all. I love jazz music and sad music. I'm a sentimental guy. I'm a romantic guy." Well, if that's how the frontman of Limp Bizkit feels about Limp Bizkit, imagine how the rest of us feel. - https://www.rollingstone.com/music/music-lists/readers-poll-the-ten-worst-bands-of-the-nineties-13654/
+Step into a time when the World Wide Web was the Wild Wide Web—a vibrant, untamed space where music and fandom collided. It was an era of dial-up connections, AIM chatrooms, and Napster downloads—a different place, a fun place.
 
+## The timeline
 
+### 2001
 
-https://www.ajournalofmusicalthings.com/limp-bizkit-one-biggest-bands-world-werent-happened/
+- Touring and Publicity: Limp Bizkit continued their extensive touring in support of their album "Chocolate Starfish and the Hot Dog Flavored Water," maintaining a high profile in the music press and media.
+
+### 2000
+
+- MTV Video Music Awards: Limp Bizkit won the Best Rock Video award for "Break Stuff" at the 2000 MTV Video Music Awards.
+Release of "Chocolate Starfish and the Hot Dog Flavored Water": On October 17, 2000, the band released their third studio album, which debuted at number one on the Billboard 200. The album featured singles "My Generation," "Rollin' (Air Raid Vehicle)," and "Take a Look Around."
+
+### 1999
+
+- Woodstock '99 Performance: Limp Bizkit's performance at Woodstock '99 on July 24, 1999, was marked by controversy and riots, with their set contributing to the chaos.
+
+- Release of "Significant Other": Limp Bizkit released their second album, "Significant Other," on June 22, 1999. The album debuted at number one on the Billboard 200 chart and included hits "Nookie" and "Break Stuff."
+
+### 1998
+
+- Touring and Growing Popularity: The band toured extensively, gaining popularity through their energetic live performances and association with Korn and the Family Values Tour.
+
+### 1997
+
+- Release of Debut Album: Limp Bizkit released their debut album "Three Dollar Bill, Y'all$" on July 1, 1997. The album featured their breakout single "Counterfeit."
