@@ -1,0 +1,51 @@
+name: "The Nookie: Build and Deploy"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    name: "The Nookie: Build and Deploy"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: "npm"
+
+      - uses: actions/cache/restore@v4
+        id: cache
+        with:
+          path: |
+            src/assets/
+          key: 11ty-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            11ty-${{ runner.os }}
+            ${{ runner.os }}-11ty
+
+      - name: Build website
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy website to server
+        uses: easingthemes/ssh-deploy@v5.0.3
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.CPANEL_SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.CPANEL_HOST }}
+          REMOTE_PORT: ${{ secrets.CPANEL_PORT }}
+          REMOTE_USER: ${{ secrets.CPANEL_USER }}
+          SOURCE: "dist/"
+          TARGET: ${{ secrets.CPANEL_TARGET }}
+          EXCLUDE: ".git*, .github*, node_modules*, src*"
+          ARGS: "-avzr --delete"
+
+      - uses: actions/cache/save@v4
+        with:
+          path: |
+            src/assets/
+          key: 11ty-${{ runner.os }}-${{ github.run_id }}
