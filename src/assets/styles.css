@@ -115,9 +115,7 @@ h2 {
 }
 
 footer > p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 /* layout */
